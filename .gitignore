@@ -1,0 +1,12 @@
+*__pycache__/
+*.py[cod]
+*.env
+env/
+build/
+.cache/
+.pytest_cache/
+.vscode/
+*.log
+*.egg-info
+.mypy_cache/
+*.min.js

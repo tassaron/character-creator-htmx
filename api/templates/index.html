@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+<main>
+    {{content}}
+    <div hx-get="/stuff" hx-trigger="load"></div>
+</main>
+{% endblock %}
