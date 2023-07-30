@@ -1,0 +1,12 @@
+<div id="character-data" class="codeblock grid-header">
+    <h3 class="grid-header">
+        Your Data &#123;
+    </h3>
+    {% for k, v in character_data.items() %}
+    {% if v != None %}
+    <div class="grid-item">{{k}}:</div>
+    <div class="grid-item">{{v}}</div>
+    {% endif %}
+    {% endfor %}
+    &#125;
+</div>

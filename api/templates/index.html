@@ -1,7 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
-<main>
-    {{content}}
-    <div hx-get="/stuff" hx-trigger="load"></div>
+<main class="grid-container">
+    <h1 class="grid-header">
+        Character Creator
+    </h1>
+    <div class="grid-item">
+        <div hx-get="/image" hx-trigger="load"></div>
+    </div>
+    <div class="grid-item">
+        {% include 'form.html' %}
+    </div>
+    <div id="character-data" class="codeblock grid-header"></div>
 </main>
 {% endblock %}

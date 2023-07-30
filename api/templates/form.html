@@ -1,0 +1,32 @@
+<div class="form-container">
+    <form id="edit-character" hx-target="#character-data" hx-swap="outerHTML" hx-trigger="change, load"
+        hx-swap-oob="true" hx-post="/data">
+        <h3>Your Character</h3>
+        <fieldset>
+            <label for="char-name">Name</label>
+            <input id="char-name" name="name" placeholder="Sam" type="text" tabindex="1" required autofocus>
+        </fieldset>
+        <fieldset>
+            <label for="char-level">Level</label>
+            <input id="char-level" name="level" placeholder="1" type="number" tabindex="2" min="1" max="20" required>
+        </fieldset>
+        <fieldset>
+            <label for="char-class">Class</label>
+            <select id="char-class" name="class">
+                <option value="">--choose a class--</option>
+                <option value="barbarian">Barbarian</option>
+                <option value="bard">Bard</option>
+                <option value="cleric">Cleric</option>
+                <option value="druid">Druid</option>
+                <option value="fighter">Fighter</option>
+                <option value="monk">Monk</option>
+                <option value="paladian">Paladin</option>
+                <option value="ranger">Ranger</option>
+                <option value="rogue">Rogue</option>
+                <option value="sorcerer">Sorcerer</option>
+                <option value="warlock">Warlock</option>
+                <option value="wizard">Wizard</option>
+            </select>
+        </fieldset>
+    </form>
+</div>
