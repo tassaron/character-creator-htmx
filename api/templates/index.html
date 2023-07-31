@@ -5,11 +5,16 @@
         Character Creator
     </h1>
     <div class="grid-item">
-        <div hx-get="/image" hx-trigger="load"></div>
+        <div id="character-image" hx-post="/image" hx-target="#edit-character" hx-trigger="change, load"
+            hx-swap-oob="true">
+            <div class="lds-dual-ring"></div>
+        </div>
     </div>
     <div class="grid-item">
         {% include 'form.html' %}
     </div>
-    <div id="character-data" class="codeblock grid-header"></div>
+    <div id="character-data" class="codeblock grid-header">
+        <div class="lds-dual-ring"></div>
+    </div>
 </main>
 {% endblock %}

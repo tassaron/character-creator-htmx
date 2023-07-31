@@ -1,18 +1,16 @@
 <div class="form-container">
-    <form id="edit-character" hx-target="#character-data" hx-swap="outerHTML" hx-trigger="change, load"
-        hx-swap-oob="true" hx-post="/data">
+    <form id="edit-character">
         <h3>Your Character</h3>
-        <fieldset>
+        <fieldset hx-target="#character-data" hx-swap="outerHTML" hx-trigger="change, load" hx-swap-oob="true"
+            hx-post="/data">
             <label for="char-name">Name</label>
-            <input id="char-name" name="name" placeholder="Sam" type="text" tabindex="1" required autofocus>
-        </fieldset>
-        <fieldset>
+            <input id="char-name" name="name" placeholder="Sam" type="text" tabindex="1" autofocus>
+
             <label for="char-level">Level</label>
-            <input id="char-level" name="level" placeholder="1" type="number" tabindex="2" min="1" max="20" required>
-        </fieldset>
-        <fieldset>
+            <input id="char-level" name="level" type="number" tabindex="2" min="1" max="20" value="1">
+
             <label for="char-class">Class</label>
-            <select id="char-class" name="class">
+            <select id="char-class" name="class" tabindex="3">
                 <option value="">--choose a class--</option>
                 <option value="barbarian">Barbarian</option>
                 <option value="bard">Bard</option>
@@ -26,6 +24,54 @@
                 <option value="sorcerer">Sorcerer</option>
                 <option value="warlock">Warlock</option>
                 <option value="wizard">Wizard</option>
+            </select>
+        </fieldset>
+        <fieldset hx-target="#character-image" hx-swap="outerHTML" hx-trigger="change, load" hx-swap-oob="true"
+            hx-post="/image">
+            <label for="char-body">Body</label>
+            <select id="char-body" name="body" tabindex="4">
+                <option value="0">Loaf</option>
+                <option value="1">Trapezoid 1</option>
+                <option value="2">Trapezoid 2</option>
+                <option value="3">Hourglass</option>
+                <option value="4">Egg</option>
+                <option value="5">Square</option>
+            </select>
+
+            <label for="char-head">Head</label>
+            <select id="char-head" name="head" tabindex="5">
+                <option value="circle">Circle</option>
+                <option value="oval">Oval</option>
+                <option value="square">Square</option>
+            </select>
+
+            <label for="char-face">Face</label>
+            <select id="char-face" name="face" tabindex="6">
+                <option value="neutral">Neutral</option>
+                <option value="closedsmile">Smile</option>
+                <option value="closedfrown">Frown</option>
+                <option value="opensmile">Open Smile</option>
+                <option value="openfrown">Open Frown</option>
+                <option value="slightfrown">Slight Frown</option>
+                <option value="shocked">Shocked</option>
+                <option value="cloud">Cloud</option>
+            </select>
+
+            <label for="char-hair">Hair</label>
+            <select id="char-hair" name="hair" tabindex="7">
+                <option value="longmess">Long Hair</option>
+                <option value="nancy">Nancy</option>
+                <option value="wings">Wings</option>
+            </select>
+
+            <label for="char-hat">Hat</label>
+            <select id="char-hat" name="hat" tabindex="8">
+                <option value="crown">Crown</option>
+                <option value="wizard">Wizard</option>
+                <option value="elf">Elf</option>
+                <option value="muffintop">Muffin Top</option>
+                <option value="winter">Winter</option>
+                <option value="muffintop">Muffin Top</option>
             </select>
         </fieldset>
     </form>

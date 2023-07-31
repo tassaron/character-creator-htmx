@@ -23,6 +23,12 @@ h1 {
     display: grid;
 }
 
+small {
+    font-size: medium;
+    padding: 1rem;
+    font-family: monospace;
+}
+
 .grid-header {
     display: inline-grid;
     padding: 1em;
@@ -107,4 +113,33 @@ fieldset {
 #edit-character select:focus {
     outline: 0;
     border: 1px solid #999;
+}
+
+.lds-dual-ring {
+    padding-left: -100px;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #000;
+    border-color: #000 transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
