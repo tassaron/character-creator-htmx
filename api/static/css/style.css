@@ -21,6 +21,8 @@ h1 {
 
 .grid-container {
     display: grid;
+    row-gap: 25px;
+    margin: auto;
 }
 
 small {
@@ -40,7 +42,6 @@ small {
 .grid-item {
     display: inline-grid;
     width: 100%;
-    margin: 0 auto;
     text-align: center;
 }
 
@@ -142,4 +143,8 @@ fieldset {
     100% {
         transform: rotate(360deg);
     }
+}
+
+img {
+    max-width: 400px
 }
