@@ -5,8 +5,8 @@
         Character Creator
     </h1>
     <div class="grid-item">
-        <div id="character-image" hx-post="/image" hx-target="#edit-character" hx-trigger="change, load"
-            hx-swap-oob="true">
+        <div id="character-image" hx-post="{{url_for('main.get_image')}}" hx-target="#edit-character"
+            hx-trigger="change, load" hx-swap-oob="true">
             <div class="lds-dual-ring"></div>
         </div>
     </div>

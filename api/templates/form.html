@@ -2,7 +2,7 @@
     <form id="edit-character">
         <h3>Your Character</h3>
         <fieldset hx-target="#character-data" hx-swap="outerHTML" hx-trigger="change, load" hx-swap-oob="true"
-            hx-post="/data">
+            hx-post="{{url_for('main.get_data')}}">
             <label for="char-name">Name</label>
             <input id="char-name" name="name" placeholder="Sam" type="text" tabindex="1" autofocus>
 
@@ -27,7 +27,7 @@
             </select>
         </fieldset>
         <fieldset hx-target="#character-image" hx-swap="outerHTML" hx-trigger="change, load" hx-swap-oob="true"
-            hx-post="/image">
+            hx-post="{{url_for('main.get_image')}}">
             <label for="char-body">Body</label>
             <select id="char-body" name="body" tabindex="4">
                 <option value="0">Loaf</option>

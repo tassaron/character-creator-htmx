@@ -1,13 +1,27 @@
+import os
 from flask import Flask, Blueprint, render_template, url_for, request
 from dnd_character import Character, CLASSES, __version__
 from . import character
 
 
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv()
+except ImportError:
+    pass
+
+
 main = Blueprint("main", __name__)
 
 
-def create_app() -> Flask:
-    app = Flask(__package__)
+class MyFlask(Flask):
+    def add_url_rule(self, rule, *args, **kwargs):
+        return super().add_url_rule(os.getenv("ROOT_DIR", "") + rule, *args, **kwargs)
+
+
+def create_app() -> MyFlask:
+    app = MyFlask(__package__)
     app.register_blueprint(main)
     return app
 
